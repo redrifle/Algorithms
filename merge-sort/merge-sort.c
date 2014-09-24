@@ -31,36 +31,6 @@ int merge(int a[], int p, int q, int r)
             a[k] = right[j];
             ++j;
         }
-
-        /* This next part can be used to show the operation of
-         * mege sort without using sentinels.
-         * If you un-comment it, you should comment out the lines
-         * "left[n1] = 420;" and "right[n2] = 420;" above, otherwise
-         * you would defeat the purpose entirely.
-
-        if (i == n1)
-        {
-            ++k;
-            while (j < n2)
-            {
-                a[k] = right[j];
-                ++k;
-                ++j;
-            }
-            break;
-        }
-        else if (j == n2)
-        {
-            ++k;
-            while (i < n1)
-            {
-                a[k] = left[i];
-                ++k;
-                ++j;
-            }
-            break;
-        }
-        */
     }
 
     return 0;
