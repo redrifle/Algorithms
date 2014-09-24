@@ -48,5 +48,5 @@ clean:
 	rm -rf $(SRCDIR1)$(PROGNAME1)
 	rm -rf $(SRCDIR1)$(PROGNAME2)
 	rm -rf $(SRCDIR2)$(PROGNAME3)
-	rm -rf $(SRCDIR1)$(PROGNAME4)
+	rm -rf $(SRCDIR2)$(PROGNAME4)
 	rm -rf $(SRCDIR1)$(PROGNAME5)
