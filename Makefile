@@ -1,7 +1,8 @@
 PROGNAME1 = "insertion-sort"
 PROGNAME2 = "nonincreasing-insertion-sort"
 PROGNAME3 = "merge-sort"
-PROGNAME4 = "recursive-insertion-sort"
+PROGNAME4 = "no-sentinel-merge-sort"
+PROGNAME5 = "recursive-insertion-sort"
 SRCDIR1 = "insertion-sort/"
 SRCDIR2 = "merge-sort/"
 OBJ = "obj/"
@@ -9,6 +10,7 @@ OBJ = "obj/"
 all: insertion-sort \
     nonincreasing-insertion-sort \
     merge-sort \
+    no-sentinel-merge-sort \
     recursive-insertion-sort
 
 insertion-sort: insertion-sort.o
@@ -29,11 +31,17 @@ merge-sort: merge-sort.o
 merge-sort.o:
 	gcc -c $(SRCDIR2)$(PROGNAME3).c -o $(OBJ)$(PROGNAME3).o
 
+no-sentinel-merge-sort: no-sentinel-merge-sort.o
+	gcc $(OBJ)$(PROGNAME4).o -o $(SRCDIR2)$(PROGNAME4)
+
+no-sentinel-merge-sort.o:
+	gcc -c $(SRCDIR2)$(PROGNAME4).c -o $(OBJ)$(PROGNAME4).o
+
 recursive-insertion-sort: recursive-insertion-sort.o
-	gcc $(OBJ)$(PROGNAME4).o -o $(SRCDIR1)$(PROGNAME4)
+	gcc $(OBJ)$(PROGNAME5).o -o $(SRCDIR1)$(PROGNAME5)
 
 recursive-insertion-sort.o:
-	gcc -c $(SRCDIR1)$(PROGNAME4).c -o $(OBJ)$(PROGNAME4).o
+	gcc -c $(SRCDIR1)$(PROGNAME5).c -o $(OBJ)$(PROGNAME5).o
 
 clean:
 	rm -rf $(OBJ)*
@@ -41,3 +49,4 @@ clean:
 	rm -rf $(SRCDIR1)$(PROGNAME2)
 	rm -rf $(SRCDIR2)$(PROGNAME3)
 	rm -rf $(SRCDIR1)$(PROGNAME4)
+	rm -rf $(SRCDIR1)$(PROGNAME5)
