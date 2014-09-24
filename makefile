@@ -38,6 +38,6 @@ recursive-insertion-sort.o:
 clean:
 	rm -rf $(OBJ)*
 	rm -rf $(SRCDIR1)$(PROGNAME1)
-	rm -rf $(SRCDIR2)$(PROGNAME2)
-	rm -rf $(SRCDIR1)$(PROGNAME3)
+	rm -rf $(SRCDIR1)$(PROGNAME2)
+	rm -rf $(SRCDIR2)$(PROGNAME3)
 	rm -rf $(SRCDIR1)$(PROGNAME4)
