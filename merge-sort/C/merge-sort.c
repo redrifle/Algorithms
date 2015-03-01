@@ -32,7 +32,6 @@ int merge(int a[], int p, int q, int r)
             ++j;
         }
     }
-
     return 0;
 }
 
