@@ -1,3 +1,2 @@
 # Algorithms
-Reading through CLRS and uploading my translated algorithms here.
-So far I have merge-sort, and two variants of insertion-sort.
+These are my implementations of algorithms covered in the [CLRS](https://en.wikipedia.org/wiki/Introduction_to_Algorithms)
